@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap');
+
+:root{
+    --color-headlines-lightBlue: #EFF6FF;
+    --color-button-heavyBlue:#22335A;
+    --color-button-hover-heavyBlue:#22335ab9;
+    --color-button-blueSky:#3B82F6;
+    --color-font-heavyGray:#0F172A;
+    --color-card-hover-lightGrey:#b6b6b698;
+    --boxShadow-cards:1px 1px 15px 6px rgba(15,23,42,0.59);
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+.grid_nav{
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110px;
+    background-color: var(--color-headlines-lightBlue);
+}
+
+nav img{
+    height: 110px;
+    margin-top: 7px;
+}
+
+#buttons_container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav_btn{
+    height: 40px;
+    width: 100px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background-color: var(--color-font-heavyGray);
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.nav_btn:hover{
+    background-color: var(--color-button-hover-heavyBlue);
+}
+
+#home_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home_btn{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background:none;
+    border: 2px solid var(--color-font-heavyGray);
+    border-radius: 50%;
+}
+
+.home_btn:hover{
+    border-color: var(--color-button-hover-heavyBlue);
+    color: var(--color-button-hover-heavyBlue);
+}
+
+.slider-container{
+    width: 1138px;
+    height: 336px;
+    margin: 25px auto;
+    position: relative;
+}
+
+.slider-container svg{
+    display:none;
+}
+
+.slider {
+ margin: 0 auto;
+ border-radius: 16px;
+ width: 100%;
+ height: 100%;
+ display: flex;
+ overflow-x: hidden;
+ scroll-behavior: smooth;
+}
+
+.slider-container img{
+ width: 1138px;
+ min-width: 100%;
+ height: 100%;
+ object-fit: cover;
+}
+
+#previous, #next{
+    width: 36px;
+    height: 107px;
+    border-radius: 0 5px 5px 0px;
+    background-color: #ffffff;
+    color: #69b2fb;
+    
+
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    top: calc(50% - 54px);
+    left: 0px;
+    cursor: pointer;
+}
+
+#previous svg, #next svg{
+    display:initial;
+}
+
+#previous{
+    box-shadow:2px 0 3px rgb(0 0 0 / 15%);
+}
+
+#next{
+    border-radius: 5px 0px 0px 5px;
+    left: unset;
+    right: 0px;
+    box-shadow:2px 0 3px rgb(0 0 0 / 15%);
+}
+
+.dots-container{
+ display: flex;
+ justify-content: center;
+ margin: -20px auto;
+}
+
+.dots-container .dot{
+ width: 8px;
+ height: 8px;
+ border-radius: 50%;
+ background-color: #c9c8c8;
+ margin: 0 5px;
+}
+
+.dots-container .dot.active{
+ width: 9px;
+ height: 9px;
+ background-color: white;
+}
+
+.headlines{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    font-weight: 800;
+    height: 85px;
+    width: 100%;
+    background-color: var(--color-headlines-lightBlue);
+    color: var(--color-font-heavyGray);
+    margin-bottom: 50px;
+}
+
+#cards_container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card_content{
+    padding: 20px;
+    width: 260px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid var(--color-card-hover-lightGrey);
+    border-radius: 16px;
+}
+
+.card_content:hover{
+    box-shadow: var(--boxShadow-cards);
+    border-width: 1px;
+}
+
+.img_content img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.know_title{
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.know_text{
+    text-align: center;
+}
+
+#know_container,#carbon_container{
+    margin-bottom: 50px;
+}
+
+#carbon_content{
+    height: 600px;
+}
+
+footer{
+    background-color: var(--color-headlines-lightBlue);
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+

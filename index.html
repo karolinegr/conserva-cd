@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <title>CONSERVA-CD</title>
+</head>
+<body>
+        
+    <header>
+        <nav class="grid_nav">
+            <div class="item_nav" id="logo_container">
+                <img src="./assets/Logo.svg" alt="">
+            </div>
+            <div class="item_nav" id="buttons_container">
+                <a href="/sobre_page/index_sobre.html"><button class="nav_btn">Sobre</button></a>
+                <a href="/acoes_page/index_acoes.html"><button class="nav_btn">Ações</button></a>
+                <a href="/mapas_page/index_mapas.html"><button class="nav_btn">Mapas</button></a>
+                <a href="/agenda_page/index_agenda.html"><button class="nav_btn">Agenda</button></a>
+                <a href="/contato_page/index_contato.html"><button class="nav_btn">Contato</button></a>
+            </div>
+            <div class="item_nav" id="home_container">
+                <button class="home_btn">
+                    <i data-feather="home"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <section id="slider_container">
+        <div class="slider-container">
+            <span id="previous"><i data-feather="chevron-left"></i></span>
+            <span id="next"><i data-feather="chevron-right"></i></span>
+            <div id="slider" class="slider">
+              <img src="./assets/slider.png">
+              <img src="./assets/slider.png">
+              <img src="./assets/slider.png">
+              <img src="./assets/slider.png">
+            </div>
+            <div class="dots-container">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+    <section id="know_container">
+        <div class="headlines" id="know_headline">
+            Você sabia?
+        </div>
+        <div id="cards_container">
+            <div class="card_content">
+                <div class="img_content"><img src="./assets/Icon.png" alt=""></div>
+                <div class="know_title">TITLE</div>
+                <div class="know_text">BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA</div>
+            </div>
+            <div class="card_content">
+                <div class="img_content"><img src="./assets/Icon.png" alt=""></div>
+                <div class="know_title">TITLE</div>
+                <div class="know_text">BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA</div>
+            </div>
+            <div class="card_content">
+                <div class="img_content"><img src="./assets/Icon.png" alt=""></div>
+                <div class="know_title">TITLE</div>
+                <div class="know_text">BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA</div>
+            </div>
+            <div class="card_content">
+                <div class="img_content"><img src="./assets/Icon.png" alt=""></div>
+                <div class="know_title">TITLE</div>
+                <div class="know_text">BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA</div>
+            </div>
+        </div>  
+    </section>
+    <section id="carbon_container">
+        <div class="headlines" id="carbon_headline">
+            Pegada de Carbono
+        </div>
+        <div id="carbon_content">
+
+        </div>
+    </section>
+
+    <footer>
+        <section id="creater_container">
+            <p>Criado por Karoline Ribeiro, Daniella Miranda, Victória Avelino e Samuel Xavier</p>
+        </section>
+    </footer>
+
+<script>
+    feather.replace()
+</script>
+<script src="script.js"></script>
+</body>
+</html>
