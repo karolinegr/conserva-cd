@@ -49,8 +49,9 @@ nav img{
     color: #fff;
     background-color: var(--color-font-heavyGray);
     border: none;
-    border-radius: 2px;
     cursor: pointer;
+    border-radius: 100%;
+    box-shadow: -3px 2px 16px 3px rgba(118,160,251,0.57);
 }
 
 .nav_btn:hover{
