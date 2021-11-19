@@ -63,10 +63,11 @@ nav img{
     color: var(--color-font-heavy);
 }
 
-button .nav_btn.active{
+.nav_btn.active{
     background-color: var(--color-button-active);
     color: var(--color-font-heavy);
     box-shadow: var(--boxShadow-buttons-active);
+    cursor: pointer;
 }
 
 #home_container{
@@ -241,7 +242,7 @@ footer{
     align-items: center;
     padding: 15px 0;
 
-    position: sticky;
+    position: fixed;
     bottom: 0;
 
     font-size: 14px;
