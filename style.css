@@ -63,7 +63,7 @@ nav img{
     color: var(--color-font-heavy);
 }
 
-.nav_btn.active{
+button .nav_btn.active{
     background-color: var(--color-button-active);
     color: var(--color-font-heavy);
     box-shadow: var(--boxShadow-buttons-active);
@@ -240,6 +240,9 @@ footer{
     justify-content: center;
     align-items: center;
     padding: 15px 0;
+
+    position: sticky;
+    bottom: 0;
 
     font-size: 14px;
     font-weight: 500;
