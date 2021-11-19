@@ -242,7 +242,7 @@ footer{
     align-items: center;
     padding: 15px 0;
 
-    position: fixed;
+    position: relative;
     bottom: 0;
 
     font-size: 14px;
