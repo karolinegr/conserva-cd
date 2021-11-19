@@ -10,6 +10,7 @@
     --color-card-hover-lightGrey:#b6b6b698;
     --boxShadow-cards:1px 1px 15px 6px rgba(15,23,42,0.59);
     --boxShadow-buttons:-1px 1px 16px 0px #06667D;
+    --boxShadow-buttons-active:-1px 1px 16px 0px #eebfafab;
     --textShadow: 2px 2px 5px #06667D;
 }
 
@@ -54,7 +55,7 @@ nav img{
     border: none;
     cursor: pointer;
     border-radius: 100%;
-    box-shadow: var(--boxShadow-buttons)
+    box-shadow: var(--boxShadow-buttons);
 }
 
 .nav_btn:hover{
@@ -63,7 +64,9 @@ nav img{
 }
 
 .nav_btn.active{
-    background-color: var(--color-button-blueSky);
+    background-color: var(--color-button-active);
+    color: var(--color-font-heavy);
+    box-shadow: var(--boxShadow-buttons-active);
 }
 
 #home_container{
