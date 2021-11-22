@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap');
 
 :root{
-    --color-headlines: #01404E;
+    --color-headlines: #01404eab;
     --color-button:#F1A48A;
     --color-button-hover:#eebfafab;
     --color-button-active:#DA9280;
@@ -221,7 +221,7 @@ nav img{
     font-weight: 800;
 }
 
-.know_text{
+.know_title, .know_text{
     text-align: center;
 }
 
