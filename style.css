@@ -253,3 +253,31 @@ footer p{
     color: var(--color-font-light);
 }
 
+ 
+h1{
+	font-size: 50px;
+	vertical-align: midle;
+	font-family: 'Inter', sans-serif;
+	color: #fff;
+   	text-indent: 2ch;
+	height: 150px;
+	background-size: cover;
+ 	display: flex;
+    align-items: center;   	
+    padding: 15px 0;
+}
+
+h2{
+	text-indent: 6.25ch;
+}
+
+.pr{
+	text-indent: 11ch;
+}
+
+.back1{
+	border: 10px outset rgb(5,79,119);
+}
+.box{
+	text-indent: 11ch;
+}
