@@ -30,8 +30,9 @@
         </nav>
     </header>
 
-    <section id="about_container">
-
+    <section class="map_container" id="map">
+        <iframe width="100%" height="600px" frameborder="0" 
+        allowfullscreen src="//umap.openstreetmap.fr/en/map/importancia-biologica_684883?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=false&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=false&onLoadPanel=caption&captionBar=false"></iframe>
     </section>
 
     <footer>
@@ -43,6 +44,7 @@
 <script>
     feather.replace()
 </script>
-<script src="script.js"></script>
+<script src="script_mapa.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBD1Cxi9A5tyG3ba4d9tPdZpPplUrmUyUY&callback=initMap"></script>
 </body>
 </html>
