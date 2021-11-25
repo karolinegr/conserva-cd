@@ -31,56 +31,43 @@
     </header>
 
     <section id="contact_container"> 
-	
-        <div class="back1" style="background-image:  url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiCV73zc_Lzp3mXwVap3z9eEETyZOFFh7I2Q&usqp=CAU); background-size: cover;" > 
-        <h1 >ENTRE EM CONTATO CONOSCO</h1> </div>
-        <br/> 
-        <br/> 
         <h2>Gostou da nossa iniciativa e quer saber mais? </h2>
-        <br/>
-        <p class ="pr">Estamos nas principais mídias sociais. </p> 
-        <br/>
-        <p class ="pr">Envie um e-mail para nós: </p> 
+        <p class ="pr">Envie um e-mail para nós</p> 
     
         <form name="input" action="/processador.php" method="GET">
         <table class="Box" id="box">
             <tr>
-        <td style="text-indent: 11ch;"><label > <b>Nome: </b></label> <input type="text" name="nome" size="85" required> </td>
+        <td><label > <b>Nome: </b></label> <input type="text" id="nome" size="85" required> </td>
         <td>  </td>
             </tr>
             <tr>
-        <td style="text-indent: 11ch;"><label><b> E-mail: </b></label> <input type="email" name="nome" size="84" > </td>
+        <td><label><b> E-mail: </b></label> <input type="email" id="email" size="84" > </td>
         <td> </td>
             </tr>
             <tr>
-        <td style="text-indent: 11ch;"><label><b> Telefone: </b></label><input type="text" name="nome" size="10"><td>  </td>
+        <td><label><b> Telefone: </b></label><input type="tel" id="telefone" size="10"><td>  </td>
          </td>
             </tr>
-            <tr>
-        <td style="text-indent: 11ch;"> <label><b> Sexo: </b> <input type="radio" name="sex" value="male" size="52"> <b>Masculino</b>
-        <input type="radio" name="sex" value="female" size="52"><b> Feminino</b></td></label>
-            <br>
-            </tr>
+    </tr>
+    <tr>
+      <td colspan="4"> <label> <b>Mensagem: </b></label>
     </tr>
     <p></p>
     <tr>
-      <td colspan="4"; style="text-indent: 11ch;"  > <label> <b>Mensagem: </b></label>
-    </tr>
-    <p></p>
-    <tr size="200">
-        <td style="text-indent: 11ch;"> <textarea placeholder="Deixe sua mensagem aqui.." name="Mensagem" ></textarea></td>
+        <td> <textarea placeholder="Deixe sua mensagem aqui.." id="Mensagem" rows="4" cols="95"></textarea></td>
     </tr>
     <tr>
-    <td style="text-indent: 11ch;"><input type="button" value="Enviar">
-    <input type="reset" value="Limpar"></td>
+    <td id="botoes"><input type="button" value="Enviar" class="botao">
+    <input type="reset" value="Limpar" class="botao"></td>
     </tr>
     <tr>
-    <form method=“processar.php”>
     </tr>	
     </table>
 
     </form> 
         </section>
+
+
     <footer>
         <section id="creater_container">
             <p>Criado por Karoline Ribeiro, Daniella Miranda, Victória Avelino e Samuel Xavier ❤</p>
