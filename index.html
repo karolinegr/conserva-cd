@@ -84,8 +84,7 @@
         <div class="headlines" id="carbon_headline">
             <span class="headline_text">Pegada de Carbono</span>
         </div>
-        <div id="carbon_content">
- <div class="container">
+        <div class="containerCarbono">
       <div class="progress-bar">
         <div class="step">
           <p>Doméstico</p>
@@ -117,7 +116,7 @@
         </div>
       </div>
       <div class="form-outer">
-        <form action="#">
+        <form>
           <div class="page slide-page">
           <div class="title">DOMÉSTICO</div>
             <div class="field">
@@ -132,8 +131,8 @@
            	 </select>
             </div>
             <div class="field">
-            <div class="label">Quantas vezes por semana você consome carne?</div>
-              <input type="number" name="carne" placeholder="0">
+            <div class="label">Dias na semana que você consome carne?</div>
+              <input type="number" name="carne" id="carne" placeholder="0">
             </div>
             <div class="field">
               <button class="firstNext next">Próximo</button>
@@ -143,8 +142,8 @@
           <div class="page">
             <div class="title">CONSUMO MENSAL</div>
             <div class="field">
-            <div class="label">Qual o gasto de energia elétrica em sua casa?</div>
-              <input type="price" name="energia"placeholder="R$100,00">
+            <div class="label">Qual o gasto de energia em sua casa?</div>
+              <input type="price" name="energia" id="energia" placeholder="R$100,00">
             </div>
             <div class="field">
             <div class="label">Que tipo de gás você usa na sua casa?</div>
@@ -155,7 +154,7 @@
             </div>
             <div class="field">
             <div class="label">Qual o gasto de gás por mês sua casa?</div>
-              <input type="price" name="gas" placeholder="R$100,00">
+              <input type="price" name="gas" id="gas" placeholder="R$100,00">
             </div>
 
 
@@ -166,14 +165,14 @@
           </div>
 
           <div class="page">
-            <div class="title">TRASNPORTE AÉREO (ANUAL)</div>
+            <div class="title">TRANSPORTE AÉREO (ANUAL)</div>
              <div class="field">
-            <div class="label">Qnts voos internaciosnais você faz por ano?</div>
-              <input type="number" name="internacional" placeholder="0">
+            <div class="label">Qtd voos internaciosnais você faz por ano?</div>
+              <input type="number" name="internacional"  id="internacional" placeholder="0">
             </div>
             <div class="field">
-            <div class="label">Qnts voos nacionais você faz por ano?</div>
-              <input type="number" name="nacional" placeholder="0">
+            <div class="label">Qtd voos nacionais você faz por ano?</div>
+              <input type="number" name="nacional" id="nacioanl" placeholder="0">
             </div>
             <div class="field btns">
               <button class="prev-2 prev">Anterior</button>
@@ -184,16 +183,16 @@
           <div class="page">
             <div class="title">TRANSPORTE (SEMANAL)</div>
              <div class="field">
-            <div class="label">Qnts horas por semana você gasta de ônibus?</div>
-              <input type="number" name="onibus" placeholder="1 hora">
+            <div class="label">Qnts horas você gasta de ônibus?</div>
+              <input type="number" name="onibus" id="onibus" placeholder="1 hora">
             </div>
             <div class="field">
             <div class="label">Qnts horas você gasta no trêm/metrô?</div>
-              <input type="number" name="trem" placeholder="1 hora">
+              <input type="number" name="trem" id="trem" placeholder="1 hora">
             </div>
             <div class="field">
             <div class="label">Qnts km você gasta de carro?</div>
-              <input type="number" name="carro" placeholder="10 km">
+              <input type="number" name="carro" id="carro" placeholder="10 km">
             </div>
             <div class="field btns">
               <button class="prev-3 prev">Anterior</button>
@@ -202,10 +201,8 @@
           </div>
         </form>
       </div>
-    </div>
         </div>
-    </section>
-
+      </section>
     <footer>
         <section id="creater_container">
             <p>Criado por Karoline Ribeiro, Daniella Miranda, Victória Avelino e Samuel Xavier ❤</p>
