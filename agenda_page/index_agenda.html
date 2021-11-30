@@ -1,48 +1,279 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="/conserva-cd/style.css">
     <script src="https://unpkg.com/feather-icons"></script>
     <title>Agenda - CONSERVA-CD</title>
-</head>
-<body>
-        
+
+    <style>
+      #schedule_container {
+        width: 100%;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .calendar {
+        width: 45rem;
+        height: 48rem;
+      }
+
+      .month {
+        width: 100%;
+        height: 12rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        text-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
+        color: #F1A48A;
+      }
+
+      .month i {
+        font-size: 2.5rem;
+        cursor: pointer;
+      }
+
+      .month h1 {
+        font-size: 3rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        margin-bottom: 1rem;
+        color: #06667D;
+        text-indent: 0;
+      }
+
+      #construct{
+          height: fit-content;
+          font-size: 30px;
+          color: #06667D;
+          text-indent: 0;
+          border: 1px dotted #EEBFAF;
+          border-radius: 8px;
+          width: 400px;
+          display: flex;
+          justify-content: center;
+          margin: 15px 0;
+      }
+
+      .month p {
+        font-size: 1.6rem;
+      }
+
+      .weekdays {
+        width: 100%;
+        height: 5rem;
+        padding: 0 0.4rem;
+        display: flex;
+        align-items: center;
+      }
+
+      .weekdays div {
+        font-size: 1.5rem;
+        font-weight: 400;
+        letter-spacing: 0.1rem;
+        width: calc(44.2rem / 7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.5);
+      }
+
+      .days {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0.2rem;
+      }
+
+      .days div {
+        font-size: 1.4rem;
+        margin: 0.3rem;
+        width: calc(40.2rem / 7);
+        height: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.2s;
+      }
+
+      .days div:hover:not(.today) {
+        background-color: #eebfafab;
+        border: 0.2rem solid #777;
+        cursor: pointer;
+      }
+
+      .prev-date,
+      .next-date {
+        opacity: 0.5;
+      }
+
+      .today {
+        background-color: #849292;
+      }
+    </style>
+  </head>
+  <body>
     <header>
-        <nav class="grid_nav">
-            <div class="item_nav" id="logo_container">
-                <img src="/conserva-cd/assets/Logo.svg" alt="">
-            </div>
-            <div class="item_nav" id="buttons_container">
-                <a href="/conserva-cd/sobre_page/index_sobre.html"><button class="nav_btn">Sobre</button></a>
-                <a href="/conserva-cd/acoes_page/index_acoes.html"><button class="nav_btn">Ações</button></a>
-                <a href="/conserva-cd/mapas_page/index_mapas.html"><button class="nav_btn">Mapas</button></a>
-                <a href="/conserva-cd/agenda_page/index_agenda.html"><button class="nav_btn active">Agenda</button></a>
-                <a href="/conserva-cd/contato_page/index_contato.html"><button class="nav_btn">Contato</button></a>
-            </div>
-            <div class="item_nav" id="home_container">
-                <a href="/conserva-cd"><button class="home_btn">
-                    <i data-feather="home"></i>
-                </button></a>
-            </div>
-        </nav>
+      <nav class="grid_nav">
+        <div class="item_nav" id="logo_container">
+          <img src="/conserva-cd/assets/Logo.svg" alt="" />
+        </div>
+        <div class="item_nav" id="buttons_container">
+          <a href="/conserva-cd/sobre_page/index_sobre.html"
+            ><button class="nav_btn">Sobre</button></a
+          >
+          <a href="/conserva-cd/acoes_page/index_acoes.html"
+            ><button class="nav_btn">Ações</button></a
+          >
+          <a href="/conserva-cd/mapas_page/index_mapas.html"
+            ><button class="nav_btn">Mapas</button></a
+          >
+          <a href="/conserva-cd/agenda_page/index_agenda.html"
+            ><button class="nav_btn active">Agenda</button></a
+          >
+          <a href="/conserva-cd/contato_page/index_contato.html"
+            ><button class="nav_btn">Contato</button></a
+          >
+        </div>
+        <div class="item_nav" id="home_container">
+          <a href="/conserva-cd"
+            ><button class="home_btn">
+              <i data-feather="home"></i></button
+          ></a>
+        </div>
+      </nav>
     </header>
 
     <section id="schedule_container">
-
+    <h1 id="construct">EM CONSTRUÇÃO</h1>
+      <div class="calendar">
+        <div class="month">
+          <i class="fas fa-angle-left prev"></i>
+          <div class="date">
+            <h1></h1>
+            <p></p>
+          </div>
+          <i class="fas fa-angle-right next"></i>
+        </div>
+        <div class="weekdays">
+          <div>Seg</div>
+          <div>Ter</div>
+          <div>Qua</div>
+          <div>Qui</div>
+          <div>Sex</div>
+          <div>Sáb</div>
+          <div>Dom</div>
+        </div>
+        <div class="days"></div>
+      </div>
     </section>
 
     <footer>
-        <section id="creater_container">
-            <p>Criado por Karoline Ribeiro, Daniella Miranda, Victória Avelino e Samuel Xavier ❤</p>
-        </section>
+      <section id="creater_container">
+        <p>
+          Criado por Karoline Ribeiro, Daniella Miranda, Victória Avelino e
+          Samuel Xavier ❤
+        </p>
+      </section>
     </footer>
 
-<script>
-    feather.replace()
-</script>
-<script src="script.js"></script>
-</body>
+    <script>
+      feather.replace();
+    </script>
+    <script>
+      const date = new Date();
+
+      const renderCalendar = () => {
+        date.setDate(1);
+
+        const monthDays = document.querySelector(".days");
+
+        const lastDay = new Date(
+          date.getFullYear(),
+          date.getMonth() + 1,
+          0
+        ).getDate();
+
+        const prevLastDay = new Date(
+          date.getFullYear(),
+          date.getMonth(),
+          0
+        ).getDate();
+
+        const firstDayIndex = date.getDay();
+
+        const lastDayIndex = new Date(
+          date.getFullYear(),
+          date.getMonth() + 1,
+          0
+        ).getDay();
+
+        const nextDays = 7 - lastDayIndex - 1;
+
+        const months = [
+          "Janeiro",
+          "Fevereiro",
+          "Março",
+          "Abril",
+          "Maio",
+          "Junho",
+          "Julho",
+          "Agosto",
+          "Setembro",
+          "Outubro",
+          "Novembro",
+          "Dezembro",
+        ];
+
+        document.querySelector(".date h1").innerHTML = months[date.getMonth()];
+
+        document.querySelector(".date p").innerHTML = new Date().toDateString();
+
+        let days = "";
+
+        for (let x = firstDayIndex; x > 0; x--) {
+          days += `<div class="prev-date">${prevLastDay - x + 1}</div>`;
+        }
+
+        for (let i = 1; i <= lastDay; i++) {
+          if (
+            i === new Date().getDate() &&
+            date.getMonth() === new Date().getMonth()
+          ) {
+            days += `<div class="today">${i}</div>`;
+          } else {
+            days += `<div>${i}</div>`;
+          }
+        }
+
+        for (let j = 1; j <= nextDays; j++) {
+          days += `<div class="next-date">${j}</div>`;
+          monthDays.innerHTML = days;
+        }
+      };
+
+      document.querySelector(".prev").addEventListener("click", () => {
+        date.setMonth(date.getMonth() - 1);
+        renderCalendar();
+      });
+
+      document.querySelector(".next").addEventListener("click", () => {
+        date.setMonth(date.getMonth() + 1);
+        renderCalendar();
+      });
+
+      renderCalendar();
+    </script>
+    <script src="script.js"></script>
+  </body>
 </html>

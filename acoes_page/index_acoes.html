@@ -1,48 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/conserva-cd/style.css">
     <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+      #action_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 465px;
+      }
+      #construct {
+        height: fit-content;
+        font-size: 30px;
+        color: #06667d;
+        text-indent: 0;
+        border: 1px dotted #eebfaf;
+        border-radius: 8px;
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        margin: 15px 0;
+      }
+      #action_about{
+          width: 600px;
+          text-align: center;
+      }
+    </style>
+
     <title>Ações - CONSERVA-CD</title>
-</head>
-<body>
-        
+  </head>
+  <body>
     <header>
-        <nav class="grid_nav">
-            <div class="item_nav" id="logo_container">
-                <img src="/conserva-cd/assets/Logo.svg" alt="">
-            </div>
-            <div class="item_nav" id="buttons_container">
-                <a href="/conserva-cd/sobre_page/index_sobre.html"><button class="nav_btn">Sobre</button></a>
-                <a href="/conserva-cd/acoes_page/index_acoes.html"><button class="nav_btn active">Ações</button></a>
-                <a href="/conserva-cd/mapas_page/index_mapas.html"><button class="nav_btn">Mapas</button></a>
-                <a href="/conserva-cd/agenda_page/index_agenda.html"><button class="nav_btn">Agenda</button></a>
-                <a href="/conserva-cd/contato_page/index_contato.html"><button class="nav_btn">Contato</button></a>
-            </div>
-            <div class="item_nav" id="home_container">
-                <a href="/conserva-cd"><button class="home_btn">
-                    <i data-feather="home"></i>
-                </button></a>
-            </div>
-        </nav>
+      <nav class="grid_nav">
+        <div class="item_nav" id="logo_container">
+          <img src="/conserva-cd/assets/Logo.svg" alt="" />
+        </div>
+        <div class="item_nav" id="buttons_container">
+          <a href="/conserva-cd/sobre_page/index_sobre.html"><button class="nav_btn">Sobre</button></a>
+          <a href="/conserva-cd/acoes_page/index_acoes.html"><button class="nav_btn active">Ações</button></a>
+          <a href="/conserva-cd/mapas_page/index_mapas.html"><button class="nav_btn">Mapas</button></a>
+          <a href="/conserva-cd/agenda_page/index_agenda.html"><button class="nav_btn">Agenda</button></a>
+          <a href="/conserva-cd/contato_page/index_contato.html"><button class="nav_btn">Contato</button></a>
+        </div>
+        <div class="item_nav" id="home_container">
+          <a href="/conserva-cd"
+            ><button class="home_btn">
+              <i data-feather="home"></i></button
+          ></a>
+        </div>
+      </nav>
     </header>
 
     <section id="action_container">
-
+      <h1 id="construct">EM CONSTRUÇÃO</h1>
+      <p id="action_about">Esta página irá conter iniciativas de ONGs, universidades e empresas para a mitigação da ação do ser humano sobre as praias e a educação ambiental da população.</p>
     </section>
 
     <footer>
-        <section id="creater_container">
-            <p>Criado por Karoline Ribeiro, Daniella Miranda, Victória Avelino e Samuel Xavier ❤</p>
-        </section>
+      <section id="creater_container">
+        <p>
+          Criado por Karoline Ribeiro, Daniella Miranda, Victória Avelino e Samuel Xavier ❤
+        </p>
+      </section>
     </footer>
 
-<script>
-    feather.replace()
-</script>
-<script src="script.js"></script>
-</body>
+    <script>
+      feather.replace();
+    </script>
+    <script src="script.js"></script>
+  </body>
 </html>
