@@ -116,12 +116,12 @@
         </div>
       </div>
       <div class="form-outer">
-        <form>
+        <form onsubmit="return false">
           <div class="page slide-page">
           <div class="title">DOMÉSTICO</div>
             <div class="field">
             <div class="label">Quantas pessoas moram na sua casa?</div>
-              <input type="number" name="pessoas" placeholder="1">
+              <input type="number" name="pessoas" id="pessoas" placeholder="1">
             </div>
             <div class="field">
             <div class="label" name="coleta_seletiva">Você faz coleta seletiva?</div>
@@ -172,7 +172,7 @@
             </div>
             <div class="field">
             <div class="label">Qtd voos nacionais você faz por ano?</div>
-              <input type="number" name="nacional" id="nacioanl" placeholder="0">
+              <input type="number" name="nacional" id="nacional" placeholder="0">
             </div>
             <div class="field btns">
               <button class="prev-2 prev">Anterior</button>
@@ -196,7 +196,7 @@
             </div>
             <div class="field btns">
               <button class="prev-3 prev">Anterior</button>
-              <button class="submit">Calcular</button>
+              <button class="submit" onclick="result()">Calcular</button>
             </div>
           </div>
         </form>
