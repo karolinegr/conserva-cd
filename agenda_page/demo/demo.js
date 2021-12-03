@@ -60,21 +60,21 @@ $(document).ready(function() {
             id: "event001",
             name: "Dia dos Oceanos",
             description: "Comemorado o dia dos Oceanos e do profissional oceanógrafo",
-            date: "Junho 08, 2021",
+            date: "June 08, 2021",
             type: "event",
             everyYear: !0
         }, {
             id: "event002",
             name: "Natal",
             description: "Feliz natal!",
-            date: "Dezembro 25, 2021",
+            date: "December 25, 2021",
             type: "event",
             everyYear: !0
         }, {
             id: "event003",
             name: "Lançamento CONSERVA-CD",
             description: "Lançamento da primeira versão do projeto CONSERVA-CD.",
-            date: today,
+            date: "November 30, 2021",
             type: "event"
         } ]
     });
