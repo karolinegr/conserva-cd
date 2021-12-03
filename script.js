@@ -80,6 +80,9 @@ const submitBtn = document.querySelector(".submit");
 const progressText = [...document.querySelectorAll(".step p")];
 const progressCheck = [...document.querySelectorAll(".step .check")];
 const bullet = [...document.querySelectorAll(".step .bullet")];
+
+
+
 let max = 4;
 let current = 1;
 
@@ -135,6 +138,10 @@ prevBtnFourth.addEventListener("click", function(event){
   current -= 1;
 });
 
+
+
+const mediaBrasil = 10.4
+
 var totalSomaValor = 0;
       function result(){
         var voo_domestico = document.getElementById("nacional").value;
@@ -144,7 +151,136 @@ var totalSomaValor = 0;
         var onibus = document.getElementById("onibus").value;
         var carne = document.getElementById("carne").value;
 
-        var totalSoma = parseInt(voo_domestico*106.1) +  parseInt(voo_internacional*605.6) +  parseInt(carro*16) +  parseInt(trem*8) +  parseInt(onibus*8) +  parseInt(carne*0.02310);
-        console.log(totalSoma)
+        var pessoas = document.getElementById("pessoas").value;
+        var qtd_gasDomestico = document.getElementById("gas").value ;
+        var energia = document.getElementById("energia").value ;
+        
+        const coletaSeletiva = document.getElementById('residuos').options.selectedIndex
+        const gas_type = document.getElementById('gas_type').options.selectedIndex
+
+        if (coletaSeletiva === 0){
+            var residuos = 0.67;
+        } else {
+            var residuos = 0.70;
+        }
+
+        if (gas_type === 0){
+            var gas_domestico = 38;
+        } else {
+            var gas_domestico = 2.1;
+        }
+        
+
+        var domestico = (pessoas*(((energia/0.703)*0.1) + ((gas_domestico/13)*qtd_gasDomestico)))/1000
+        var transporte = (carro*16 + trem*8 + onibus*8)/1000
+        var consumo = (carne*0.02310)/1000
+        var transporteAereo = (voo_domestico*106.1 + voo_internacional*605.6)/1000
+            
+        var totalSoma = (transporteAereo + transporte +  consumo + residuos + domestico).toFixed(2);
+
         window.alert(`Você emite ${totalSoma} tCO2 por ano`)
+
+        google.charts.load('current', {'packages':['corechart']});
+        function mostrarGraficoPizza(){
+         
+          // 
+          
+          function desenharGraficoPizza(){
+              var tabela = new google.visualization.DataTable();
+              tabela.addColumn('string', 'Categoria');
+              tabela.addColumn('number', 'TCO2 por ano');
+              tabela.addRows([
+                  ['Transporte', transporte],
+                  ['Consumo', consumo],
+                  ['Transporte Aéreo', transporteAereo],
+                  ['Resíduos', residuos],
+                  ['Doméstico', domestico]  
+              ]);
+          
+              let options ={
+                  pieHole:0.2,
+                  pieSliceTextStyle: {
+                      color: 'black',
+                      fontSize: 14,
+                      fontName: 'Inter',
+                    },
+                  slices:[
+                      {color:'#06667D'},
+                      {color:'#218C9F'},
+                      {color:'#DA9280'},
+                      {color:'#F1A48A'},
+                      {color:'#EEBFAF'}
+                  ],
+                  with:450,
+                  height:350,
+                  chartArea:{
+                      height:800,
+                      width: 800,
+                  }
+              }
+              var grafico = new google.visualization.PieChart(document.getElementById('chart_carbon'));
+              grafico.draw(tabela, options)
+          }
+          google.charts.setOnLoadCallback(desenharGraficoPizza);
+        };
+        
+        function mostrarGraficoBarra(){
+          
+          var valorTotalCO = parseInt(totalSoma);
+        
+          function desenharGraficoBarra(){
+              var tabelaBarras = new google.visualization.arrayToDataTable(
+                  [
+                      ['Emissão de CO2','Média de um brasileiro (por ano)','Sua pegada'],
+                      ['', mediaBrasil, valorTotalCO]
+                  ]
+              );
+          
+              if (mediaBrasil >= valorTotalCO){
+                  var options = {
+                      chartArea: {
+                          width:400,
+                          height:'25%',
+                      },
+                      colors:['#01404E','#EEBFAF'],
+                      vAxis:{
+                          title:'Emissão de carbono',
+                          titleTextStyle:{
+                              color:'black',
+                              fontSize: 10,
+                              italic:false,
+                              bold:true,
+                          }
+                      },
+                      width: 800,
+                  }
+              } else {
+                  var options = {
+                      chartArea: {
+                          width:400,
+                          height:'25%',
+                      },
+                      colors:['#EEBFAF','#01404E'],
+                      vAxis:{
+                          title:'Emissão de carbono',
+                          titleTextStyle:{
+                              color:'black',
+                              fontSize: 10,
+                              italic:false,
+                              bold:true,
+                          }
+                      },
+                      width: 800,
+                  }
+              }
+              
+              var graficoBarra = new google.visualization.BarChart(document.getElementById('bar_carbon'));
+              graficoBarra.draw(tabelaBarras, options)
+          }
+          google.charts.setOnLoadCallback(desenharGraficoBarra);    
+        };
+
+        mostrarGraficoPizza()
+        mostrarGraficoBarra()
       }
+
